@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(dryRun=false,
-				 tags={"@a","~@s"  },
+				// tags={"@a","~@s"  },
 				 monochrome=true,
 				 plugin={"pretty","html:target/html", "json:target/cucember-report.json"},
 				 //glue="./src/test/java/com/Selenium/stepDefinition",
