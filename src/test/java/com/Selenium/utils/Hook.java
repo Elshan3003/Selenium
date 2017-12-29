@@ -20,10 +20,10 @@ public class Hook {
 	@Before
 	public  void setupDriver(){
 		
-		switch ("chrome") {
+		//switch ("chrome") {
 		
-		case "chrome":
-			System.setProperty(Config.getProperty("chromeDriver"), Config.getProperty("chromePath"));
+		//case "chrome":
+			System.setProperty(Configs.getProperty("chromeDriver"), Configs.getProperty("chromePath"));
 			if(driver==null ||((RemoteWebDriver)driver).getSessionId()==null){
 			ChromeOptions cOptions=new ChromeOptions();
 			    cOptions.addArguments("disable-infobars");
@@ -40,21 +40,21 @@ public class Hook {
 			driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 			}
 			Base.driver=driver;
-			break;
+	//		break;
 			
-		case "firefox":
-			System.setProperty(Config.getProperty("firefoxDriver"), Config.getProperty("firefoxPath"));
-			if(driver==null ||((RemoteWebDriver)driver).getSessionId()==null){
-			driver=new FirefoxDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-			driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-			}
-			Base.driver=driver;
-			break;
-
-		
-		}
+//		case "firefox":
+//			System.setProperty(Config.getProperty("firefoxDriver"), Config.getProperty("firefoxPath"));
+//			if(driver==null ||((RemoteWebDriver)driver).getSessionId()==null){
+//			driver=new FirefoxDriver();
+//			driver.manage().window().maximize();
+//			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//			driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+//			}
+//			Base.driver=driver;
+//			break;
+//
+//		
+//		}
 		
 	}
 	

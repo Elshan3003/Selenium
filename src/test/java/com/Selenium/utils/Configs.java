@@ -3,7 +3,7 @@ package com.Selenium.utils;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class Config {
+public class Configs {
 	static Properties configFile;
 	static{
 		try{
